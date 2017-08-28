@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,600,700&amp;subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <title>HTML Academy: Нердс</title>
@@ -12,7 +12,7 @@
 <body>
   <header class="main-header">
     <nav class="main-navigation container">
-      <a class="main-logo">
+      <a class="main-logo" href="#">
           <img src="img/nerds-logo.png" width="160" height="65" alt="Логотип студии Nerds">
       </a>
       <ul class="site-navigation">
@@ -22,7 +22,7 @@
         <li><a href="#">Контакты</a></li>
       </ul>
       <div class="user-navigation">
-          <a class="cart" href="#" class="cart-link">Корзина</a>
+        <a class="cart" href="#" class="cart-link"><i class="sprite sprite-cart"></i>Корзина</a>
       </div>
     </nav>
   </header>
@@ -30,42 +30,43 @@
   <section class="hero">
     <section class="slider container">
 
-      <div class="slider-item slide-design">
+      <div class="slider-item slide-design" id="slide-design">
         <section class="slide-text">
           <p>
-            <b class="slide-title">Долго, дорого,<br> скрупулезно.</b>
-            Математически выверенный дизайн<br> для вашего сайта или мобильного приложения.
+            <b class="slide-title">Долго, дорого,<br> скрупулезно.</b> Математически выверенный дизайн<br> для вашего сайта или мобильного приложения.
           </p>
           <a href="#" class="button slider-btn">Узнать больше</a>
         </section>
       </div>
 
-      <div class="slider-item slide-math">
+      <div class="slider-item slide-math" id="slide-math">
         <section class="slide-text">
           <p>
-            <b class="slide-title">Любим математику как никто другой.</b>
-            Никакого креатива, только математические формулы для расчета идеальных пропорций.
+            <b class="slide-title">Любим математику как никто другой.</b> Никакого креатива, только математические формулы для расчета идеальных пропорций.
           </p>
           <a href="#" class="button slider-btn">Узнать больше</a>
         </section>
       </div>
 
-      <div class="slider-item slide-hardcore">
+      <div class="slider-item slide-hardcore" id="slide-hardcore">
         <section class="slide-text">
           <p>
-            <b class="slide-title">Только ночь, только хардкор.</b>
-            Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.
+            <b class="slide-title">Только ночь, только хардкор.</b> Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.
           </p>
         </section>
       </div>
 
       <div class="slider-controls">
-        <input type="radio" name="slider-controls" id="slider-controls-design" checked>
+        <!-- <input type="radio" name="slider-controls" id="slider-controls-design" checked>
         <label for="slider-controls-design" class="visually-hidden">Первый слайд</label>
         <input type="radio" name="slider-controls" id="slider-controls-math">
         <label for="slider-controls-math" class="visually-hidden">Второй слайд</label>
         <input type="radio" name="slider-controls" id="slider-controls-hardcore">
-        <label for="slider-controls-hardcore" class="visually-hidden">Третий слайд</label>
+        <label for="slider-controls-hardcore" class="visually-hidden">Третий слайд</label> -->
+
+        <a href="#slide-design">Первый слайд</a>
+        <a href="#slide-math">Второй слайд</a>
+        <a href="#slide-hardcore">Третий слайд</a>
       </div>
     </section>
   </section>
@@ -77,20 +78,20 @@
       <ul class="services-list">
         <li class="service-item">
           <img src="img/main/illustration-1.jpg" width="300" height="146" alt="Веб-сайты">
-          <h2>Веб-сайты</h2>
-          <p class="services-txt">Мир никогда не будет прежним после того как увидит ваш сайт!</p>
+          <h2 class="services-title">Веб-сайты</h2>
+          <p class="services-txt">Мир никогда не будет прежним<br> после того как увидит ваш сайт!</p>
           <a href="#" class="button order-btn">Заказать</a>
         </li>
-        <li class="service-item">
+        <li class="service-item service-applications">
           <img src="img/main/illustration-2.jpg" width="300" height="146" alt="Приложения">
-          <h2>Приложения</h2>
+          <h2 class="services-title">Приложения</h2>
           <p class="services-txt">Покорите топ-10 приложений в AppStore и Google Play</p>
           <a href="#" class="button order-btn">Заказать</a>
         </li>
-        <li class="service-item">
+        <li class="service-item service-presentations">
           <img src="img/main/illustration-3.jpg" width="300" height="146" alt="Презентации">
-          <h2>Презентации</h2>
-          <p class="services-txt">Вы даже не подозреваете, насколько вы изумительны!</p>
+          <h2 class="services-title">Презентации</h2>
+          <p class="services-txt">Вы даже не подозреваете,<br> насколько вы изумительны!</p>
           <a href="#" class="button order-btn">Заказать</a>
         </li>
       </ul>
@@ -98,8 +99,8 @@
 
     <section class="info">
       <div class="studio-txt">
-        <b class="info-nerds">Мы — маленькая, но гордая дизайн-студия из Краснодара.</b>
-        <p class="info-txt">Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
+        <b class="info-nerds">Мы — маленькая, но гордая<br> дизайн-студия из Краснодара.</b>
+        <p class="info-txt">Исповедуем принципы минимализма и чистоты. Ставим математический расчет<br> превыше креатива. Работаем не покладая рук, как роботы.</p>
         <h3 class="orders">Выполняем заказы на разработку:</h3>
         <ul class="info-list">
           <li class="list-item">Веб-сайтов любой сложности</li>
@@ -113,17 +114,17 @@
         <b class="accuracy">C 2004 года любим точность во всем:</b>
         <ul class="advantages">
           <li class="advantage-item">
-            <span class="percentage">146%</span>
+            <span class="percentage">146<sup>%</sup></span>
             <span class="advantage-txt">Уровень самоотдачи</span>
           </li>
 
           <li class="advantage-item">
-            <span class="percentage">100%</span>
+            <span class="percentage">100<sup>%</sup></span>
             <span class="advantage-txt">Соблюдение сроков</span>
           </li>
 
           <li class="advantage-item">
-            <span class="percentage">50%</span>
+            <span class="percentage">50<sup>%</sup></span>
             <span class="advantage-txt">Минимальная предоплата</span>
           </li>
         </ul>
@@ -150,56 +151,89 @@
   </main>
 
   <section class="map">
-    <div class="map">
+    <div class="map-placeholder" id="map"></div>
 
-    </div>
-
-    <div class="contacts-container">
-      <span class="studio-title">Nёrds design studio</span>
-      <span class="address">191186, Санкт-Петербург, ул. Большая Конюшенная, д. 19/8</span>
-      <a class="phone" href="tel:+78122757575">7 (812) 275-75-75</a>
-      <button class="button contacts-btn" type="button">Напишите нам</button>
-      <!-- Попап форма обратной связи -->
-      <!-- <div class="contacts-popup">
-        <div class="contacts-popup-form">
-          <form action="#" method="post">
-            <fieldset>
-              <legend>Напишите нам</legend>
-              <label for="exit">Закрыть окно
-        <input type="button" id="exit" name="exit" value="exit">
-      </label>
-              <label for="name">Ваше имя
-        <input type="text" id="name" name="name" placeholder="Представьтесь, пожалуйста" required>
-      </label>
-              <label for="e-mail">Ваш e-mail
-        <input type="email" id="e-mail" name="email" placeholder="Для отправки ответа" required>
-      </label>
-              <label for="comment">Текст письма
-        <textarea id="comment" name="comment" rows="6" placeholder="В свободной форме" required></textarea>
-      </label>
-            </fieldset>
-            <label for="send">
-      <button class="button" type="submit" id="send" name="submit">Отправить</button>
-    </label>
-          </form>
-        </div>
-      </div> -->
+    <div class="contacts-container container">
+      <div class="contacts-block">
+        <span class="studio-title">Nёrds design studio</span>
+        <address>191186, Санкт-Петербург,<br> ул. Б. Конюшенная, д. 19/8</address>
+        <a class="phone" href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
+        <!-- <button class="button contacts-btn" type="button">Напишите нам</button> -->
+        <a href="#contacts-popup-form" class="button contacts-btn">Напишите нам</a>
+      </div>
     </div>
   </section>
 
   <footer class="main-footer container">
     <section class="social">
       <div class="footer-social">
-        <a class="social-btn social-btn-vk" href="#"><span class="visually-hidden">Вконтакте</span></a>
-        <a class="social-btn social-btn-fb" href="#"><span class="visually-hidden">Facebook</span></a>
-        <a class="social-btn social-btn-inst" href="#"><span class="visually-hidden">Instagram</span></a>
+        <a class="social-btn social-btn-vk" href="#"><i class="sprite sprite-icon-vk"></i><span class="visually-hidden">Вконтакте</span></a>
+        <a class="social-btn social-btn-fb" href="#"><i class="sprite sprite-icon-fb"></i><span class="visually-hidden">Facebook</span></a>
+        <a class="social-btn social-btn-inst" href="#"><i class="sprite sprite-icon-insta"></i><span class="visually-hidden">Instagram</span></a>
       </div>
     </section>
     <section class="promo">
-      <b class="promo-txt">Давайте дружить, это выгодно!</b>
-      Скидка 10% для друзей из социальных сетей.
+      <b class="promo-txt">Давайте дружить, это выгодно!</b> Скидка 10% для друзей из социальных сетей.
     </section>
   </footer>
-</body>
 
+<div id="contacts-popup-form" class="contacts-popup-form">
+  <a href="#map"><i class="sprite sprite-close-cross"></i>🞫</a>
+</div>
+
+  <!-- Попап форма обратной связи -->
+  <!-- <div class="contacts-popup">
+    <div class="contacts-popup-form">
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Напишите нам</legend>
+          <label for="exit">Закрыть окно
+    <input type="button" id="exit" name="exit" value="exit">
+  </label>
+          <label for="name">Ваше имя
+    <input type="text" id="name" name="name" placeholder="Представьтесь, пожалуйста" required>
+  </label>
+          <label for="e-mail">Ваш e-mail
+    <input type="email" id="e-mail" name="email" placeholder="Для отправки ответа" required>
+  </label>
+          <label for="comment">Текст письма
+    <textarea id="comment" name="comment" rows="6" placeholder="В свободной форме" required></textarea>
+  </label>
+        </fieldset>
+        <label for="send">
+  <button class="button" type="submit" id="send" name="submit">Отправить</button>
+  </label>
+      </form>
+    </div>
+  </div> -->
+
+  <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+  <script>
+    ymaps.ready(function() {
+      var myMap = new ymaps.Map('map', {
+          center: [59.938650, 30.323280],
+          zoom: 17
+        }, {}),
+
+        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+          hintContent: 'Nёrds design studio'
+        }, {
+          // Опции.
+          // Необходимо указать данный тип макета.
+          iconLayout: 'default#image',
+          // Своё изображение иконки метки.
+          iconImageHref: 'img/main/map-marker.png',
+          // Размеры метки.
+          iconImageSize: [231, 190],
+          // Смещение левого верхнего угла иконки относительно
+          // её "ножки" (точки привязки).
+          iconImageOffset: [-49, -190]
+        });
+
+      myMap.geoObjects
+        .add(myPlacemark);
+    });
+  </script>
+
+</body>
 </html>
