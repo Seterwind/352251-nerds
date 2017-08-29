@@ -13,12 +13,12 @@
   <header class="main-header">
     <nav class="main-navigation container">
       <a class="main-logo" href="index.html">
-          <img src="img/nerds-logo.png" width="160" height="65" alt="Логотип студии Nerds">
+        <img src="img/nerds-logo.png" width="160" height="65" alt="Логотип студии Nerds">
       </a>
       <ul class="site-navigation">
         <li><a href="#">Студия</a></li>
         <li><a href="#">Клиенты</a></li>
-        <li><a href="catalog.html">Магазин</a></li>
+        <li><a href="catalog.html" class="active-page">Магазин</a></li>
         <li><a href="#">Контакты</a></li>
       </ul>
       <div class="user-navigation">
@@ -33,61 +33,51 @@
 
     <aside class="filters">
       <form class="filter-catalog" action="#" method="get">
-        <div class="filter-price">
-          <fieldset>
-            <legend>
-              Стоимость:
-            </legend>
-            <input type="range" multiple min="0" max="15000" step="10" value="200,400">
-          </fieldset>
-          <legend></legend>
-        </div>
+        <fieldset class="filter-price">
+          <legend>Стоимость:</legend>
+          <input type="range" multiple min="0" max="15000" step="10" value="200,400">
+        </fieldset>
 
-        <div class="filter-net">
-          <fieldset>
-            <legend>
-              Сетка:
-            </legend>
-            <input type="radio" name="net" value="0" checked>Адаптивная
-            <input type="radio" name="net" value="1">Фиксированная
-            <input type="radio" name="net" value="2">Резиновая
-          </fieldset>
-        </div>
+        <fieldset class="filter-net">
+          <legend>Сетка:</legend>
+          <label><input type="radio" name="net" value="0" checked><span class="paddle"></span>Адаптивная</label>
+          <label><input type="radio" name="net" value="1"><span class="paddle"></span>Фиксированная</label>
+          <label><input type="radio" name="net" value="2"><span class="paddle"></span>Резиновая</label>
+        </fieldset>
 
-        <div class="filter-features">
-          <fieldset>
-            <legend>
-              Особенности:
-            </legend>
-            <input type="checkbox" name="features" value="0" checked>Слайдер
-            <input type="checkbox" name="features" value="1">Блок преимуществ
-            <input type="checkbox" name="features" value="2" checked>Новости
-            <input type="checkbox" name="features" value="3">Галерея
-            <input type="checkbox" name="features" value="4">Корзина
-          </fieldset>
-        </div>
+        <fieldset class="filter-features">
+          <legend>Особенности:</legend>
+          <label><input type="checkbox" name="features" value="0" checked><span class="paddle"></span>Слайдер</label>
+          <label><input type="checkbox" name="features" value="1"><span class="paddle"></span>Блок преимуществ</label>
+          <label><input type="checkbox" name="features" value="2" checked><span class="paddle"></span>Новости</label>
+          <label><input type="checkbox" name="features" value="3"><span class="paddle"></span>Галерея</label>
+          <label><input type="checkbox" name="features" value="4"><span class="paddle"></span>Корзина</label>
+        </fieldset>
 
-        <button class="button show-btn" type="submit">Показать</button>
+        <button class="form-btn" type="submit">Показать</button>
       </form>
     </aside>
 
     <div class="shop-content">
       <section class="sorting">
-        <span class="sorting-title">Сортировать:</span>
-        <ul class="sorting-filters">
-          <li><a class="active" href="#">По цене</a></li>
-          <li><a href="#">По типу</a></li>
-          <li><a href="#">По названию</a></li>
-        </ul>
-        <ul class="pickers">
-          <li><a href="#">V<span class="visually-hidden">По возрастанию</span></a></li>
-          <li><a href="#">Л<span class="visually-hidden">По убыванию</span></a></li>
-        </ul>
+        <div class="sorting-title">Сортировать:</div>
+        <div>
+          <ul class="sorting-filters">
+            <li><a class="active" href="#">По цене</a></li>
+            <li><a href="#">По типу</a></li>
+            <li><a href="#">По названию</a></li>
+          </ul>
+          <ul class="pickers">
+            <li><a href="#"><span class="arrow-down"></span><span class="visually-hidden">По возрастанию</span></a></li>
+            <li><a href="#"><span class="arrow-up"></span><span class="visually-hidden">По убыванию</span></a></li>
+          </ul>
+        </div>
       </section>
 
       <section class="layouts">
         <div class="layout-item">
           <div class="layout-pic">
+            <div class="layout-window"><span></span><span></span><span></span></div>
             <img src="img/catalog/img-sedona.jpg" alt="Sedona" width="360" height="576">
           </div>
           <div class="layout-hover">
@@ -99,6 +89,7 @@
 
         <div class="layout-item">
           <div class="layout-pic">
+            <div class="layout-window"><span></span><span></span><span></span></div>
             <img src="img/catalog/img-pink.jpg" alt="Pink App" width="360" height="576">
           </div>
           <div class="layout-hover">
@@ -110,6 +101,7 @@
 
         <div class="layout-item">
           <div class="layout-pic">
+            <div class="layout-window"><span></span><span></span><span></span></div>
             <img src="img/catalog/img-barbershop.jpg" alt="Barbershop" width="360" height="576">
           </div>
           <div class="layout-hover">
@@ -121,6 +113,7 @@
 
         <div class="layout-item">
           <div class="layout-pic">
+            <div class="layout-window"><span></span><span></span><span></span></div>
             <img src="img/catalog/img-mishka.jpg" alt="Mishka" width="360" height="576">
           </div>
           <div class="layout-hover">
@@ -132,6 +125,7 @@
 
         <div class="layout-item">
           <div class="layout-pic">
+            <div class="layout-window"><span></span><span></span><span></span></div>
             <img src="img/catalog/img-aplus.jpg" alt="A Plus" width="360" height="576">
           </div>
           <div class="layout-hover">
@@ -143,6 +137,7 @@
 
         <div class="layout-item">
           <div class="layout-pic">
+            <div class="layout-window"><span></span><span></span><span></span></div>
             <img src="img/catalog/img-kvast.jpg" alt="Kvast" width="360" height="576">
           </div>
           <div class="layout-hover">
@@ -154,10 +149,10 @@
       </section>
 
       <section class="paginator">
-        <a class="nav-link page-active" href="#">1</a>
-        <a class="nav-link" href="#">2</a>
-        <a class="nav-link" href="#">3</a>
-        <a class="button page-fwd" href="#">Следующая</a>
+        <a class="nav-link form-btn active" href="#">1</a>
+        <a class="nav-link form-btn" href="#">2</a>
+        <a class="nav-link form-btn" href="#">3</a>
+        <a class="nav-link-next form-btn" href="#">Следующая</a>
       </section>
 
     </div>
@@ -182,7 +177,8 @@
       <div class="footer-social">
         <a class="social-btn social-btn-vk" href="#"><i class="sprite sprite-icon-vk"></i><span class="visually-hidden">Вконтакте</span></a>
         <a class="social-btn social-btn-fb" href="#"><i class="sprite sprite-icon-fb"></i><span class="visually-hidden">Facebook</span></a>
-        <a class="social-btn social-btn-inst" href="#"><i class="sprite sprite-icon-insta"></i><span class="visually-hidden">Instagram</span></a>
+        <a class="social-btn social-btn-inst" href="#"><i class="sprite sprite-icon-insta"></i><span
+        class="visually-hidden">Instagram</span></a>
       </div>
     </section>
     <section class="promo">
@@ -196,57 +192,57 @@
 
   <!-- Попап форма обратной связи -->
   <!-- <div class="contacts-popup">
-    <div class="contacts-popup-form">
-      <form action="#" method="post">
-        <fieldset>
-          <legend>Напишите нам</legend>
-          <label for="exit">Закрыть окно
-    <input type="button" id="exit" name="exit" value="exit">
-  </label>
-          <label for="name">Ваше имя
-    <input type="text" id="name" name="name" placeholder="Представьтесь, пожалуйста" required>
-  </label>
-          <label for="e-mail">Ваш e-mail
-    <input type="email" id="e-mail" name="email" placeholder="Для отправки ответа" required>
-  </label>
-          <label for="comment">Текст письма
-    <textarea id="comment" name="comment" rows="6" placeholder="В свободной форме" required></textarea>
-  </label>
-        </fieldset>
-        <label for="send">
-  <button class="button" type="submit" id="send" name="submit">Отправить</button>
-  </label>
-      </form>
-    </div>
-  </div> -->
+  <div class="contacts-popup-form">
+    <form action="#" method="post">
+      <fieldset>
+        <legend>Напишите нам</legend>
+        <label for="exit">Закрыть окно
+  <input type="button" id="exit" name="exit" value="exit">
+</label>
+        <label for="name">Ваше имя
+  <input type="text" id="name" name="name" placeholder="Представьтесь, пожалуйста" required>
+</label>
+        <label for="e-mail">Ваш e-mail
+  <input type="email" id="e-mail" name="email" placeholder="Для отправки ответа" required>
+</label>
+        <label for="comment">Текст письма
+  <textarea id="comment" name="comment" rows="6" placeholder="В свободной форме" required></textarea>
+</label>
+      </fieldset>
+      <label for="send">
+<button class="button" type="submit" id="send" name="submit">Отправить</button>
+</label>
+    </form>
+  </div>
+</div> -->
 
   <!-- <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-  <script>
-    ymaps.ready(function() {
-      var myMap = new ymaps.Map('map', {
-          center: [59.938650, 30.323280],
-          zoom: 17
-        }, {}),
+<script>
+  ymaps.ready(function() {
+    var myMap = new ymaps.Map('map', {
+        center: [59.938650, 30.323280],
+        zoom: 17
+      }, {}),
 
-        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-          hintContent: 'Nёrds design studio'
-        }, {
-          // Опции.
-          // Необходимо указать данный тип макета.
-          iconLayout: 'default#image',
-          // Своё изображение иконки метки.
-          iconImageHref: 'img/main/map-marker.png',
-          // Размеры метки.
-          iconImageSize: [231, 190],
-          // Смещение левого верхнего угла иконки относительно
-          // её "ножки" (точки привязки).
-          iconImageOffset: [-49, -190]
-        });
+      myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+        hintContent: 'Nёrds design studio'
+      }, {
+        // Опции.
+        // Необходимо указать данный тип макета.
+        iconLayout: 'default#image',
+        // Своё изображение иконки метки.
+        iconImageHref: 'img/main/map-marker.png',
+        // Размеры метки.
+        iconImageSize: [231, 190],
+        // Смещение левого верхнего угла иконки относительно
+        // её "ножки" (точки привязки).
+        iconImageOffset: [-49, -190]
+      });
 
-      myMap.geoObjects
-        .add(myPlacemark);
-    });
-  </script> -->
+    myMap.geoObjects
+      .add(myPlacemark);
+  });
+</script> -->
 
 </body>
 
