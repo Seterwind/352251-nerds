@@ -1,6 +1,12 @@
 html {
   box-sizing: border-box;
   font-family: "Roboto", "Arial", sans-serif;
+  font-size: 16px;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
 }
 
 *, *:before, *:after {
@@ -76,7 +82,6 @@ a {
   text-transform: uppercase;
   color: #ffffff;
   border: none;
-  font-size: 16px;
   line-height: 18px;
 }
 
@@ -126,7 +131,6 @@ a {
 }
 
 .site-navigation a {
-  font-size: 16px;
   text-transform: uppercase;
   font-weight: 500;
 }
@@ -146,7 +150,6 @@ a {
 }
 
 .user-navigation a {
-  font-size: 16px;
   text-transform: uppercase;
   font-weight: 500;
 }
@@ -168,7 +171,6 @@ a {
 .slide-text {
   max-width: 400px;
   padding-top: 74px;
-  font-size: 16px;
   line-height: 1.5;
 }
 
@@ -228,7 +230,6 @@ a {
 }
 
 .services-txt {
-  font-size: 16px;
   line-height: 1.5;
   margin-top: 17px;
   padding-bottom: 31px;
@@ -305,20 +306,18 @@ a {
 }
 
 .info-txt {
-  padding: 33px 0 38px;
-  font-size: 16px;
+  padding: 37px 0 38px;
   line-height: 1.5;
 }
 
 .orders {
-  font-size: 16px;
   line-height: 1.5;
   text-transform: uppercase;
   font-weight: 600;
+  font-size: 16px;
 }
 
 .list-item {
-  font-size: 16px;
   line-height: 1.5;
   margin-top: 24px;
 }
@@ -335,9 +334,8 @@ a {
 
 .accuracy {
   display: block;
-  padding-top: 31px;
+  padding-top: 34px;
   text-align: center;
-  font-size: 16px;
   line-height: 1.5;
   font-weight: 600;
   text-transform: uppercase;
@@ -354,7 +352,7 @@ a {
 
 .advantages {
   display: flex;
-  padding-top: 40px;
+  padding-top: 38px;
 }
 
 .advantage-item {
@@ -364,7 +362,6 @@ a {
 .advantage-txt {
   display: block;
   padding-top: 16px;
-  font-size: 16px;
   line-height: 1;
 }
 
@@ -506,4 +503,43 @@ a {
 
 .contacts-popup-form:target {
   display: block;
+}
+
+/* Каталог */
+
+.page-header {
+  font-size: 55px;
+  line-height: 1;
+  font-weight: 500;
+  background-color: #eeeeee;
+  padding: 37px 0 103px;
+  text-align: center;
+}
+
+.catalog {
+  display: flex;
+}
+
+.filters {
+  width: 260px;
+  margin-right: 140px;
+}
+
+.shop-content {
+  width: 760px;
+}
+
+.layouts {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.layout-item {
+  width: 360px;
+}
+
+.layout-hover {
+  display: none;
 }
