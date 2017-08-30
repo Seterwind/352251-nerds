@@ -145,7 +145,7 @@ a {
 .site-navigation {
   width: 600px;
   text-align: center;
-  padding-top: 34px;
+  padding-top: 33px;
 }
 
 .site-navigation li {
@@ -157,7 +157,7 @@ a {
 .site-navigation a {
   display: block;
   margin: 0 22px;
-  padding-bottom: 13px;
+  padding-bottom: 8px;
   text-transform: uppercase;
   font-weight: 500;
 }
@@ -177,7 +177,7 @@ a {
 .user-navigation {
   width: 280px;
   text-align: right;
-  padding-top: 34px;
+  padding-top: 33px;
 }
 
 .user-navigation a {
@@ -543,7 +543,7 @@ a {
   line-height: 1;
   font-weight: 500;
   background-color: #eeeeee;
-  padding: 37px 0 103px;
+  padding: 38px 0 108px;
   text-align: center;
 }
 
@@ -559,12 +559,14 @@ a {
 .filter-catalog fieldset {
   border: none;
   padding: 0;
-  margin: 0 0 58px;
+  margin: 19px 0 58px;
 }
 
 .filter-catalog legend {
   font-weight: 600;
-  font-size: 18px;
+  font-size: 19px;
+  line-height: 1.6;
+  text-transform: uppercase;
   margin-bottom: 12px;
 }
 
@@ -669,12 +671,17 @@ input[type=radio]:checked ~ .paddle {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-bottom: 34px;
+  margin-bottom: 55px;
+  font-size: 18px;
+  line-height: 1;
+  text-transform: uppercase;
+  font-weight: 600;
+margin-top: 23px;
 }
 
 .sorting-filters {
   display: inline-block;
-  margin-right: 30px;
+  margin-right: 20px;
 }
 
 .sorting-filters li {
@@ -703,7 +710,7 @@ input[type=radio]:checked ~ .paddle {
 
 .pickers li {
   display: inline-block;
-  margin-left: 18px;
+  margin-left: 9px;
 }
 
 .pickers a {
@@ -746,7 +753,7 @@ input[type=radio]:checked ~ .paddle {
 
 .layout-item {
   width: 360px;
-  margin-bottom: 33px;
+  margin-bottom: 29px;
   overflow: hidden;
   position: relative;
 }
@@ -788,4 +795,8 @@ input[type=radio]:checked ~ .paddle {
 
 .layout-item:hover .layout-hover {
   transform: translateY(0);
+}
+
+.paginator {
+  margin-top: 20px;
 }
