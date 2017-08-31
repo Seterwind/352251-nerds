@@ -156,7 +156,7 @@ a {
 
 .site-navigation a {
   display: block;
-  margin: 0 22px;
+  margin: 0 21px;
   padding-bottom: 8px;
   text-transform: uppercase;
   font-weight: 500;
@@ -200,7 +200,6 @@ a {
 }
 
 .slide-text {
-  max-width: 400px;
   padding-top: 74px;
   line-height: 1.5;
 }
@@ -211,9 +210,9 @@ a {
 
 .slide-title {
   display: block;
-  font-size: 55px;
+  font-size: 56px;
   line-height: 1;
-  padding-bottom: 26px;
+  padding-bottom: 24px;
   font-weight: 500;
 }
 
@@ -222,7 +221,7 @@ a {
   background-repeat: no-repeat;
 }
 
-.slide-math, .slide-hardcore {
+.slide-design, .slide-math {
   display: none;
 }
 
@@ -237,12 +236,12 @@ a {
 
 .slide-math {
   background-image: url(../img/main/slide-math.png);
-  background-position: right 31px bottom;
+  background-position: right 2px bottom;
 }
 
 .slide-hardcore {
   background-image: url(../img/main/slide-hardcore.png);
-  background-position: right 31px bottom;
+  background-position: right 2px bottom;
 }
 
 .slider-controls {
@@ -261,7 +260,7 @@ a {
 
 .services-txt {
   line-height: 1.5;
-  margin-top: 17px;
+  margin-top: 15px;
   padding-bottom: 31px;
 }
 
@@ -336,7 +335,7 @@ a {
 }
 
 .info-txt {
-  padding: 37px 0 38px;
+  padding: 34px 0 38px;
   line-height: 1.5;
 }
 
@@ -525,7 +524,7 @@ a {
   top: 50%;
   transform: translate(-50%, -50%);
   width: 960px;
-  padding: 73px 100px;
+  padding: 65px 100px 84px;
   background: #ffffff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   display: none;
@@ -534,7 +533,7 @@ a {
 .contacts-popup-close {
   position: absolute;
   right: 90px;
-  top: 78px;
+  top: 79px;
 }
 
 .contacts-popup-form:target {
@@ -556,8 +555,8 @@ a {
 
 .contacts-popup-form legend {
   font-size: 45px;
-  font-weight: 600;
-  margin-bottom: 20px;
+  font-weight: 500;
+  margin-bottom: 37px;
 }
 
 .contacts-popup-form .control {
@@ -568,17 +567,17 @@ a {
 .contacts-popup-form .control-name,
 .contacts-popup-form .control-email {
   width: 360px;
-  margin-bottom: 20px;
+  margin-bottom: 33px;
 }
 
 .contacts-popup-form .control-comment {
-  margin-bottom: 30px;
+  margin-bottom: 43px;
 }
 
 .contacts-popup-form label {
   display: block;
   font-weight: 600;
-  margin-bottom: 15px;
+  margin-bottom: 9px;
 }
 
 .contacts-popup-form input,
@@ -597,7 +596,7 @@ a {
 .contacts-popup-form textarea {
   height: 118px;
   line-height: 1.2;
-  padding: 14px;
+  padding: 11px;
   resize: none;
 }
 
@@ -628,7 +627,7 @@ a {
 }
 
 .contacts-popup-form .button {
-  padding: 14px 72px;
+  padding: 16px 81px;
 }
 
 /* Каталог */
@@ -662,7 +661,7 @@ a {
   font-size: 19px;
   line-height: 1.6;
   text-transform: uppercase;
-  margin-bottom: 12px;
+  margin-bottom: 48px;
 }
 
 .filter-catalog label {
@@ -974,13 +973,31 @@ input:disabled ~ .sprite {
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 35px;
-  transform: translateY(110%);
+  padding: 29px;
+  /*transform: translateY(110%);*/
   transition: transform 0.25s linear 0s;
+}
+
+.layout-title {
+  display: block;
+  padding-bottom: 15px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.6;
+  text-transform: uppercase;
+}
+
+.layout-hover p {
+color: #666666;
+padding-bottom: 31px;
 }
 
 .layout-item:hover .layout-hover {
   transform: translateY(0);
+}
+
+.layout-btn {
+  padding: 15px 61px;
 }
 
 .paginator {
