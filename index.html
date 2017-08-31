@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,600,700&amp;subset=cyrillic" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
   <title>HTML Academy: Нердс</title>
 </head>
 
@@ -22,7 +22,7 @@
         <li><a href="#">Контакты</a></li>
       </ul>
       <div class="user-navigation">
-        <a class="cart" href="#" class="cart-link"><i class="sprite sprite-cart"></i>Корзина</a>
+        <a href="#"><i class="sprite sprite-cart"></i>Корзина</a>
       </div>
     </nav>
   </header>
@@ -30,7 +30,7 @@
   <section class="hero">
     <section class="slider container">
 
-      <div class="slider-item slide-design" id="slide-design">
+      <div class="slider-item slide-design slide-active" id="slide-design">
         <section class="slide-text">
           <p>
             <b class="slide-title">Долго, дорого,<br> скрупулезно.</b> Математически выверенный дизайн<br> для вашего сайта или мобильного приложения.
@@ -58,16 +58,9 @@
       </div>
 
       <div class="slider-controls">
-        <!-- <input type="radio" name="slider-controls" id="slider-controls-design" checked>
-      <label for="slider-controls-design" class="visually-hidden">Первый слайд</label>
-      <input type="radio" name="slider-controls" id="slider-controls-math">
-      <label for="slider-controls-math" class="visually-hidden">Второй слайд</label>
-      <input type="radio" name="slider-controls" id="slider-controls-hardcore">
-      <label for="slider-controls-hardcore" class="visually-hidden">Третий слайд</label> -->
-
-        <a href="#slide-design">Первый слайд</a>
-        <a href="#slide-math">Второй слайд</a>
-        <a href="#slide-hardcore">Третий слайд</a>
+        <a href="#" data-rel="slide-design"><span class="visually-hidden">Первый слайд</span></a>
+        <a href="#" data-rel="slide-math"><span class="visually-hidden">Второй слайд</span></a>
+        <a href="#" data-rel="slide-hardcore"><span class="visually-hidden">Третий слайд</span></a>
       </div>
     </section>
   </section>
@@ -111,7 +104,7 @@
       </div>
 
       <div class="studio-img">
-        <img src="img/main/nerds-illustration.jpg" alt="Nerds logo">
+        <img src="img/main/nerds-illustration.jpg" width="360" height="208" alt="Nerds logo">
         <b class="accuracy">C 2004 года любим точность во всем:</b>
         <ul class="advantages">
           <li class="advantage-item">
@@ -136,17 +129,24 @@
     <section class="partners">
       <ul class="partners-list">
         <li class="partners-item">
-          <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/main/logo-htmlacademy.png" width="209"
-                                                                height="90" alt="HTML Academy"></a>
+          <a href="https://htmlacademy.ru/intensive/htmlcss">
+            <img src="img/main/logo-htmlacademy.png" width="209" height="90" alt="HTML Academy">
+          </a>
         </li>
         <li class="partners-item">
-          <a href="#"><img src="img/main/logo-borodinski.png" width="209" height="90" alt="Барбершоп Borodinski"></a>
+          <a href="#">
+            <img src="img/main/logo-borodinski.png" width="209" height="90" alt="Барбершоп Borodinski">
+          </a>
         </li>
         <li class="partners-item">
-          <a href="#"><img src="img/main/logo-pink.png" width="209" height="90" alt="Pink"></a>
+          <a href="#">
+            <img src="img/main/logo-pink.png" width="209" height="90" alt="Pink">
+          </a>
         </li>
         <li class="partners-item">
-          <a href="#"><img src="img/main/logo-mishka.png" width="209" height="90" alt="Mishka"></a>
+          <a href="#">
+            <img src="img/main/logo-mishka.png" width="209" height="90" alt="Mishka">
+          </a>
         </li>
       </ul>
     </section>
@@ -214,11 +214,11 @@
   <script>
     ymaps.ready(function() {
       var myMap = new ymaps.Map('map', {
-          center: [59.938650, 30.323280],
+          center: [59.939231, 30.323058],
           zoom: 17
         }, {}),
 
-        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+        myPlacemark = new ymaps.Placemark(new ymaps.geometry.Point([59.938650, 30.323280]), {
           hintContent: 'Nёrds design studio'
         }, {
           // Опции.
@@ -237,6 +237,7 @@
         .add(myPlacemark);
     });
   </script>
+  <script src="js/script.min.js"></script>
 
 </body>
 

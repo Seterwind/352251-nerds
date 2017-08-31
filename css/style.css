@@ -1,4 +1,6 @@
 html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
@@ -36,6 +38,7 @@ a {
   background-image: url(../img/spritesheet.png);
   background-repeat: no-repeat;
   display: inline-block;
+  vertical-align: baseline;
 }
 
 .sprite-cart {
@@ -100,6 +103,7 @@ a {
 
 .button {
   display: inline-block;
+  vertical-align: baseline;
   padding: 15px 54px;
   border-radius: 2px;
   background-color: #fb565a;
@@ -150,8 +154,8 @@ a {
 
 .site-navigation li {
   display: inline-block;
+  vertical-align: middle;
   margin: 0;
-
 }
 
 .site-navigation a {
@@ -219,10 +223,11 @@ a {
 .slider-item {
   height: 426px;
   background-repeat: no-repeat;
+  display: none;
 }
 
-.slide-design, .slide-math {
-  display: none;
+.slide-active {
+  display: block;
 }
 
 .slider-item:target {
@@ -245,10 +250,37 @@ a {
 }
 
 .slider-controls {
-  display: none;
-  /*position: absolute;
-  left: 0;
-  top:0;*/
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 314px;
+}
+
+.slider-controls a {
+  display: inline-block;
+  vertical-align: middle;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #ffffff;
+  margin: 0 7px;
+  position: relative;
+}
+
+.slider-controls .active {
+  cursor: default;
+}
+
+.slider-controls a.active::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  left: 5px;
+  top: 5px;
+  border: 2px solid #c2c2c2;
+  border-radius: 50%;
 }
 
 .services-title {
@@ -354,10 +386,12 @@ a {
 .list-item::before {
   content: "";
   display: inline-block;
+  vertical-align: middle;
   width: 25px;
   height: 2px;
   background: #fb565a;
   margin-right: 11px;
+  margin-top: -3px;
   vertical-align: middle;
 }
 
@@ -429,6 +463,9 @@ a {
   position: relative;
   height: 416px;
   margin-bottom: 69px;
+  overflow: hidden;
+  background: url('../img/map.jpg') center center no-repeat;
+  background-size: cover; 
 }
 
 .map-placeholder {
@@ -462,6 +499,7 @@ a {
 
 .social-btn {
   display: inline-block;
+  vertical-align: middle;
   background-color: #e1e1e1;
   width: 79px;
   height: 79px;
@@ -564,8 +602,7 @@ a {
   width: 100%;
 }
 
-.contacts-popup-form .control-name,
-.contacts-popup-form .control-email {
+.contacts-popup-form .control-name, .contacts-popup-form .control-email {
   width: 360px;
   margin-bottom: 33px;
 }
@@ -580,8 +617,7 @@ a {
   margin-bottom: 9px;
 }
 
-.contacts-popup-form input,
-.contacts-popup-form textarea {
+.contacts-popup-form input, .contacts-popup-form textarea {
   height: 50px;
   line-height: 50px;
   border: 2px solid #d7dcde;
@@ -600,35 +636,31 @@ a {
   resize: none;
 }
 
-.contacts-popup-form input::placeholder,
-.contacts-popup-form textarea::placeholder {
+.contacts-popup-form input::placeholder, .contacts-popup-form textarea::placeholder {
   color: #a1a1a1;
 }
 
-.contacts-popup-form input:hover,
-.contacts-popup-form textarea:hover {
+.contacts-popup-form input:hover, .contacts-popup-form textarea:hover {
   border-color: #b4b9bb;
 }
 
-.contacts-popup-form input:focus,
-.contacts-popup-form textarea:focus {
+.contacts-popup-form input:focus, .contacts-popup-form textarea:focus {
   border-color: #000000;
 }
 
-.contacts-popup-form input:invalid,
-.contacts-popup-form textarea:invalid {
+.contacts-popup-form input:invalid, .contacts-popup-form textarea:invalid {
   border-color: #e74246;
   color: #e74246;
 }
 
-.contacts-popup-form input:invalid::placeholder,
-.contacts-popup-form textarea:invalid::placeholder {
+.contacts-popup-form input:invalid::placeholder, .contacts-popup-form textarea:invalid::placeholder {
   color: #e74246;
 }
 
 .contacts-popup-form .button {
   padding: 16px 81px;
 }
+
 
 /* Каталог */
 
@@ -650,10 +682,22 @@ a {
   margin-right: 140px;
 }
 
-.filter-catalog fieldset {
+.filter-price {
   border: none;
   padding: 0;
-  margin: 19px 0 58px;
+  margin: 19px 0 26px;
+}
+
+.filter-net {
+  border: none;
+  padding: 0;
+  margin: 19px 0 26px;
+}
+
+.filter-features {
+  border: none;
+  padding: 0;
+  margin: 19px 0 34px;
 }
 
 .filter-catalog legend {
@@ -661,17 +705,22 @@ a {
   font-size: 19px;
   line-height: 1.6;
   text-transform: uppercase;
-  margin-bottom: 48px;
+  margin-bottom: 14px;
 }
 
 .filter-catalog label {
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .filter-catalog .form-btn {
   width: 100%;
   text-align: center;
+  margin-bottom: 8px;
+}
+
+.filter-price legend {
+  margin-bottom: 48px;
 }
 
 .filter-price-placeholder {
@@ -690,11 +739,10 @@ a {
 .filter-price-range-selected {
   background: #00ca74;
   height: 2px;
-  width: 75%;
+  width: 143px;
 }
 
-.filter-price-range::before,
-.filter-price-range::after {
+.filter-price-range::before, .filter-price-range::after {
   content: "";
   display: block;
   position: absolute;
@@ -713,17 +761,17 @@ a {
 }
 
 .filter-price-range::after {
-  left: 75%;
+  left: 143px;
   transform: translateX(-10px);
 }
 
 .filter-value-placeholder {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 27px;
 }
 
-.filter-value-from,
-.filter-value-to {
+.filter-value-from, .filter-value-to {
   width: 113px;
   text-transform: uppercase;
 }
@@ -732,8 +780,7 @@ a {
   text-align: right;
 }
 
-.filter-value-from span,
-.filter-value-to span {
+.filter-value-from span, .filter-value-to span {
   display: inline-block;
   vertical-align: middle;
   width: 80px;
@@ -752,7 +799,7 @@ input[type=checkbox] {
   z-index: -1;
 }
 
-input[type=checkbox] ~ .sprite {
+input[type=checkbox]~.sprite {
   display: inline-block;
   vertical-align: middle;
   margin-right: 10px;
@@ -761,7 +808,7 @@ input[type=checkbox] ~ .sprite {
   background-position: -30px -5px;
 }
 
-input[type=checkbox]:checked ~ .sprite {
+input[type=checkbox]:checked~.sprite {
   background-position: -63px -5px;
 }
 
@@ -772,7 +819,7 @@ input[type=radio] {
   z-index: -1;
 }
 
-input[type=radio] ~ .sprite {
+input[type=radio]~.sprite {
   display: inline-block;
   vertical-align: middle;
   margin-right: 10px;
@@ -781,19 +828,20 @@ input[type=radio] ~ .sprite {
   background-position: -100px -5px;
 }
 
-input[type=radio]:checked ~ .sprite {
+input[type=radio]:checked~.sprite {
   background-position: -94px -40px;
 }
 
-input ~ .sprite {
+input~.sprite {
   opacity: .4;
 }
 
-input:hover:not(:disabled) ~ .sprite {
-  opacity: 1;
+input:disabled~.sprite {
+  opacity: .3;
 }
 
-input:disabled ~ .sprite {
+input:hover:not(:disabled)~.sprite {
+  opacity: 1;
 }
 
 .disabled {
@@ -809,7 +857,6 @@ input:disabled ~ .sprite {
   line-height: 50px;
   text-transform: uppercase;
   border: none;
-  /*padding: 0 54px;*/
 }
 
 .form-btn:hover {
@@ -817,8 +864,7 @@ input:disabled ~ .sprite {
   background-color: #dfdfdf;
 }
 
-.form-btn:focus,
-.form-btn:active {
+.form-btn:focus, .form-btn:active {
   color: #000000;
   background-color: #d5d5d5;
   box-shadow: 0 3px 3px #bfbfbf inset;
@@ -831,6 +877,7 @@ input:disabled ~ .sprite {
   line-height: 50px;
   text-align: center;
   margin-right: 11px;
+  font-weight: 600;
 }
 
 .nav-link.active {
@@ -841,6 +888,7 @@ input:disabled ~ .sprite {
 
 .nav-link-next {
   padding: 0 79px;
+  font-weight: 600;
 }
 
 .shop-content {
@@ -862,11 +910,13 @@ input:disabled ~ .sprite {
 
 .sorting-filters {
   display: inline-block;
+  vertical-align: baseline;
   margin-right: 20px;
 }
 
 .sorting-filters li {
   display: inline-block;
+  vertical-align: baseline;
   margin-left: 27px;
 }
 
@@ -880,17 +930,18 @@ input:disabled ~ .sprite {
   opacity: .6;
 }
 
-.sorting-filters a:active,
-.sorting-filters a:focus {
+.sorting-filters a:active, .sorting-filters a:focus {
   opacity: 1;
 }
 
 .pickers {
   display: inline-block;
+  vertical-align: baseline;
 }
 
 .pickers li {
   display: inline-block;
+  vertical-align: baseline;
   margin-left: 9px;
 }
 
@@ -902,13 +953,13 @@ input:disabled ~ .sprite {
   opacity: .6;
 }
 
-.pickers a:active,
-.pickers a:focus {
+.pickers a:active, .pickers a:focus {
   opacity: 1;
 }
 
 .arrow-up {
   display: inline-block;
+  vertical-align: middle;
   width: 0;
   height: 0;
   border-left: 7px solid transparent;
@@ -918,6 +969,7 @@ input:disabled ~ .sprite {
 
 .arrow-down {
   display: inline-block;
+  vertical-align: middle;
   width: 0;
   height: 0;
   border-left: 7px solid transparent;
@@ -955,6 +1007,7 @@ input:disabled ~ .sprite {
 
 .layout-window span {
   display: inline-block;
+  vertical-align: middle;
   width: 14px;
   height: 14px;
   border-radius: 50%;
@@ -973,8 +1026,8 @@ input:disabled ~ .sprite {
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 29px;
-  /*transform: translateY(110%);*/
+  padding: 29px 29px 48px;
+  transform: translateY(110%);
   transition: transform 0.25s linear 0s;
 }
 
@@ -988,8 +1041,8 @@ input:disabled ~ .sprite {
 }
 
 .layout-hover p {
-color: #666666;
-padding-bottom: 31px;
+  color: #666666;
+  padding-bottom: 31px;
 }
 
 .layout-item:hover .layout-hover {
