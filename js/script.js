@@ -1,8 +1,8 @@
-(function() {
+(function () {
   var activeSlide, activeLink;
 
   function initialize() {
-    [].slice.call(document.querySelectorAll('.slider-controls a')).forEach(function(a) {
+    [].slice.call(document.querySelectorAll('.slider-controls a')).forEach(function (a) {
       var slide = document.getElementById(a.dataset.rel);
 
       if (slide.classList.contains('slide-active')) {
@@ -11,11 +11,18 @@
         activeLink = a;
       }
 
-      a.addEventListener('click', click);
+      a.addEventListener('click', sliderClick);
+    });
+
+    document.querySelector('.contacts-btn').addEventListener('click', openPopup);
+    document.querySelector('.contacts-popup-close').addEventListener('click', closePopup);
+
+    [].slice.call(document.querySelectorAll('.contacts-popup-form input, .contacts-popup-form textarea')).forEach(function (control) {
+      control.addEventListener('blur', touchControl)
     });
   }
 
-  function click(event) {
+  function sliderClick(event) {
     event.preventDefault();
 
     var a = event.target;
@@ -32,6 +39,20 @@
     }
 
     return false;
+  }
+
+  function openPopup(event) {
+    event.preventDefault();
+    document.querySelector('.contacts-popup-form').classList.add('opened');
+  }
+
+  function closePopup(event) {
+    event.preventDefault();
+    document.querySelector('.contacts-popup-form').classList.remove('opened');
+  }
+
+  function touchControl(event) {
+    event.target.classList.add('touched');
   }
 
   if (document.readyState == 'loading') {

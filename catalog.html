@@ -13,8 +13,8 @@
   <header class="main-header">
     <nav class="main-navigation container">
       <a class="main-logo" href="index.html">
-      <img src="img/nerds-logo.png" width="160" height="65" alt="Логотип студии Nerds">
-    </a>
+        <img src="img/nerds-logo.png" width="160" height="65" alt="Логотип студии Nerds">
+      </a>
       <ul class="site-navigation">
         <li><a href="#">Студия</a></li>
         <li><a href="#">Клиенты</a></li>
@@ -55,18 +55,50 @@
 
         <fieldset class="filter-net">
           <legend>Сетка:</legend>
-          <label><input type="radio" name="net" value="0" checked><span class="sprite"></span>Адаптивная</label>
-          <label><input type="radio" name="net" value="1"><span class="sprite"></span>Фиксированная</label>
-          <label class="disabled"><input type="radio" name="net" value="2" disabled><span class="sprite"></span>Резиновая</label>
+          <label>
+            <input class="fancy-radio" type="radio" name="net" value="0" checked>
+            <span class="sprite"></span>
+            Адаптивная
+          </label>
+          <label>
+            <input class="fancy-radio" type="radio" name="net" value="1">
+            <span class="sprite"></span>
+            Фиксированная
+          </label>
+          <label class="disabled">
+            <input class="fancy-radio" type="radio" name="net" value="2" disabled>
+            <span class="sprite"></span>
+            Резиновая
+          </label>
         </fieldset>
 
         <fieldset class="filter-features">
           <legend>Особенности:</legend>
-          <label><input type="checkbox" name="features" value="0" checked><span class="sprite"></span>Слайдер</label>
-          <label><input type="checkbox" name="features" value="1"><span class="sprite"></span>Блок преимуществ</label>
-          <label><input type="checkbox" name="features" value="2" checked><span class="sprite"></span>Новости</label>
-          <label><input type="checkbox" name="features" value="3"><span class="sprite"></span>Галерея</label>
-          <label class="disabled"><input type="checkbox" name="features" value="4" disabled><span class="sprite"></span>Корзина</label>
+          <label>
+            <input class="fancy-checkbox" type="checkbox" name="features" value="0" checked>
+            <span class="sprite"></span>
+            Слайдер
+          </label>
+          <label>
+            <input class="fancy-checkbox" type="checkbox" name="features" value="1">
+            <span class="sprite"></span>
+            Блок преимуществ
+          </label>
+          <label>
+            <input class="fancy-checkbox" type="checkbox" name="features" value="2" checked>
+            <span class="sprite"></span>
+            Новости
+          </label>
+          <label>
+            <input class="fancy-checkbox" type="checkbox" name="features" value="3">
+            <span class="sprite"></span>
+            Галерея
+          </label>
+          <label class="disabled">
+            <input class="fancy-checkbox" type="checkbox" name="features" value="4" disabled>
+            <span class="sprite"></span>
+            Корзина
+          </label>
         </fieldset>
 
         <button class="form-btn" type="submit">Показать</button>
@@ -92,11 +124,11 @@
       <section class="layouts">
         <div class="layout-item">
           <a href="#" class="layout-pic">
-            <div class="layout-window"><span></span><span></span><span></span></div>
+            <div class="layout-window"><span></span></div>
             <img src="img/catalog/img-sedona.jpg" alt="Sedona" width="360" height="576">
           </a>
           <div class="layout-hover">
-            <b class="layout-title">Sedona</b>
+            <a href="#" class="layout-title">Sedona</a>
             <p>Информационный сайт<br> для туристов</p>
             <a class="button layout-btn" href="#">9 900 руб.</a>
           </div>
@@ -104,11 +136,11 @@
 
         <div class="layout-item">
           <a href="#" class="layout-pic">
-            <div class="layout-window"><span></span><span></span><span></span></div>
+            <div class="layout-window"><span></span></div>
             <img src="img/catalog/img-pink.jpg" alt="Pink App" width="360" height="576">
           </a>
           <div class="layout-hover">
-            <b class="layout-title">Pink App</b>
+            <a href="#" class="layout-title">Pink App</a>
             <p>Продуктовый лендинг<br> приложения для iOS и Android</p>
             <a class="button layout-btn" href="#">9 900 руб.</a>
           </div>
@@ -116,11 +148,11 @@
 
         <div class="layout-item">
           <a href="#" class="layout-pic">
-            <div class="layout-window"><span></span><span></span><span></span></div>
+            <div class="layout-window"><span></span></div>
             <img src="img/catalog/img-barbershop.jpg" alt="Barbershop" width="360" height="576">
           </a>
           <div class="layout-hover">
-            <b class="layout-title">Barbershop</b>
+            <a href="#" class="layout-title">Barbershop</a>
             <p>Сайт салона красоты.<br> Для мужчин, да</p>
             <a class="button layout-btn" href="#">9 900 руб.</a>
           </div>
@@ -128,11 +160,11 @@
 
         <div class="layout-item">
           <a href="#" class="layout-pic">
-            <div class="layout-window"><span></span><span></span><span></span></div>
+            <div class="layout-window"><span></span></div>
             <img src="img/catalog/img-mishka.jpg" alt="Mishka" width="360" height="576">
           </a>
           <div class="layout-hover">
-            <b class="layout-title">Mishka</b>
+            <a href="#" class="layout-title">Mishka</a>
             <p>Интернет-магазин<br> вязаных игрушек</p>
             <a class="button layout-btn" href="#">9 900 руб.</a>
           </div>
@@ -140,11 +172,11 @@
 
         <div class="layout-item">
           <a href="#" class="layout-pic">
-            <div class="layout-window"><span></span><span></span><span></span></div>
+            <div class="layout-window"><span></span></div>
             <img src="img/catalog/img-aplus.jpg" alt="A Plus" width="360" height="576">
           </a>
           <div class="layout-hover">
-            <b class="layout-title">A Plus</b>
+            <a href="#" class="layout-title">A Plus</a>
             <p>Лендинг курсов повышения<br> квалификации</p>
             <a class="button layout-btn" href="#">9 900 руб.</a>
           </div>
@@ -152,11 +184,11 @@
 
         <div class="layout-item">
           <a href="#" class="layout-pic">
-            <div class="layout-window"><span></span><span></span><span></span></div>
+            <div class="layout-window"><span></span></div>
             <img src="img/catalog/img-kvast.jpg" alt="Kvast" width="360" height="576">
           </a>
           <div class="layout-hover">
-            <b class="layout-title">Кваст</b>
+            <a href="#" class="layout-title">Кваст</a>
             <p>Промо-сайт производителя<br> крафтового кваса</p>
             <a class="button layout-btn" href="#">9 900 руб.</a>
           </div>
@@ -169,7 +201,6 @@
         <a class="nav-link form-btn" href="#">3</a>
         <a class="nav-link-next form-btn" href="#">Следующая</a>
       </section>
-
     </div>
   </main>
 
@@ -181,8 +212,7 @@
         <span class="studio-title">Nёrds design studio</span>
         <address>191186, Санкт-Петербург,<br> ул. Б. Конюшенная, д. 19/8</address>
         <a class="phone" href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
-        <!-- <button class="button contacts-btn" type="button">Напишите нам</button> -->
-        <a href="#contacts-popup-form" class="button contacts-btn">Напишите нам</a>
+        <a href="#" class="button contacts-btn">Напишите нам</a>
       </div>
     </div>
   </section>
@@ -201,8 +231,8 @@
     </section>
   </footer>
 
-  <div id="contacts-popup-form" class="contacts-popup-form">
-    <a href="#map" class="contacts-popup-close"><i class="sprite sprite-close-cross"></i></a>
+  <div class="contacts-popup-form">
+    <a href="#" class="contacts-popup-close"><i class="sprite sprite-close-cross"></i></a>
 
     <!-- Попап форма обратной связи -->
     <form action="#" method="post">
@@ -210,20 +240,20 @@
         <legend>Напишите нам</legend>
 
         <div class="contacts-popup-placeholder">
-          <span class="control control-name">
-          <label for="name">Ваше имя:</label>
-          <input type="text" id="name" name="name" placeholder="Представьтесь, пожалуйста" required>
-        </span>
+          <div class="control control-name">
+            <label for="name">Ваше имя:</label>
+            <input type="text" id="name" name="name" placeholder="Представьтесь, пожалуйста" required>
+          </div>
 
-          <span class="control control-email">
-          <label for="email">Ваш e-mail:</label>
-          <input type="email" id="email" name="email" placeholder="Для отправки ответа" required>
-        </span>
+          <div class="control control-email">
+            <label for="email">Ваш e-mail:</label>
+            <input type="email" id="email" name="email" placeholder="Для отправки ответа" required>
+          </div>
 
-          <span class="control control-comment">
-          <label for="comment">Текст письма:</label>
-          <textarea id="comment" name="comment" rows="6" placeholder="В свободной форме" required></textarea>
-        </span>
+          <div class="control control-comment">
+            <label for="comment">Текст письма:</label>
+            <textarea id="comment" name="comment" rows="6" placeholder="В свободной форме" required></textarea>
+          </div>
         </div>
       </fieldset>
 
@@ -258,6 +288,7 @@
         .add(myPlacemark);
     });
   </script>
+  <script src="js/script.min.js"></script>
 
 </body>
 
