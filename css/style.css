@@ -101,6 +101,7 @@ a {
 }
 
 .button {
+  font-family: "Roboto", "Arial", sans-serif;
   display: inline-block;
   vertical-align: baseline;
   padding: 15px 54px;
@@ -110,7 +111,7 @@ a {
   color: #ffffff;
   border: none;
   line-height: 18px;
-  max-width: 250px;
+  max-width: 275px;
 }
 
 .button:hover {
@@ -216,7 +217,7 @@ a {
   line-height: 1;
   padding-bottom: 24px;
   font-weight: 500;
-  letter-spacing: -0.38px;
+  letter-spacing: -0.68px;
 }
 
 .slider-item {
@@ -230,6 +231,27 @@ a {
 .slider-item p {
   margin-bottom: 42px;
   max-width: 600px;
+}
+
+.slide-design .slide-title {
+  width: 550px;
+}
+
+.slide-math .slide-title {
+  width: 550px;
+}
+
+.slide-math p {
+  width: 408px;
+}
+
+.slide-hardcore .slide-title {
+  width: 500px;
+  letter-spacing: 0px;
+}
+
+.slide-hardcore p {
+  width: 371px;
 }
 
 .slide-active {
@@ -568,16 +590,16 @@ a {
   line-height: 1.7;
   text-transform: uppercase;
   font-weight: 600;
-  margin-bottom: 20px;
+  margin-bottom: 23px;
 }
 
 .contacts-block address {
   font-style: normal;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .contacts-btn {
-  padding: 15px;
+  padding: 16px;
   text-align: center;
   display: block;
   margin-top: 37px;
@@ -594,7 +616,11 @@ a {
   height: 590px;
   padding: 65px 100px 84px;
   background: #ffffff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.8);
+}
+
+.contacts-popup-form.invalid-form {
+  animation: shake 0.6s;
 }
 
 .contacts-popup-form.opened {
@@ -646,6 +672,7 @@ a {
 }
 
 .contacts-popup-form input, .contacts-popup-form textarea {
+  font-family: "Roboto", "Arial", sans-serif;
   height: 50px;
   line-height: 50px;
   border: 2px solid #d7dcde;
@@ -668,7 +695,7 @@ a {
   color: #a1a1a1;
 }
 
-.contacts-popup-form input:hover, .contacts-popup-form textarea:hover {
+.contacts-popup-form input:hover:not(.invalid):not(:focus), .contacts-popup-form textarea:hover:not(.invalid):not(:focus) {
   border-color: #b4b9bb;
 }
 
@@ -676,17 +703,17 @@ a {
   border-color: #000000;
 }
 
-.contacts-popup-form input.touched:invalid, .contacts-popup-form textarea.touched:invalid {
+.contacts-popup-form .invalid {
   border-color: #e74246;
   color: #e74246;
 }
 
-.contacts-popup-form input.touched:invalid::placeholder, .contacts-popup-form textarea.touched:invalid::placeholder {
+.contacts-popup-form .invalid::placeholder {
   color: #e74246;
 }
 
 .contacts-popup-form .button {
-  padding: 16px 81px;
+  padding: 16px 83px;
 }
 
 /* Каталог */
@@ -711,13 +738,13 @@ a {
 .filter-price {
   border: none;
   padding: 0;
-  margin: 19px 0 26px;
+  margin: 19px 0 27px;
 }
 
 .filter-net {
   border: none;
   padding: 0;
-  margin: 19px 0 23px;
+  margin: 19px 0 24px;
 }
 
 .filter-net label {
@@ -745,6 +772,8 @@ a {
 }
 
 .filter-catalog .form-btn {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-weight: 500;
   width: 100%;
   text-align: center;
   margin-bottom: 8px;
@@ -833,7 +862,7 @@ a {
 .fancy-checkbox~.sprite {
   display: inline-block;
   vertical-align: middle;
-  margin-right: 9px;
+  margin-right: 7px;
   width: 27px;
   height: 23px;
   background-position: -30px -5px;
@@ -862,7 +891,7 @@ a {
 .fancy-radio~.sprite {
   display: inline-block;
   vertical-align: middle;
-  margin-right: 10px;
+  margin-right: 8px;
   width: 25px;
   height: 25px;
   background-position: -100px -5px;
@@ -1025,13 +1054,10 @@ a {
 
 .layout-item {
   width: 360px;
+  height: 619px;
   margin-bottom: 29px;
   overflow: hidden;
   position: relative;
-}
-
-.layout-pic {
-  display: block;
 }
 
 .layout-window {
@@ -1086,7 +1112,7 @@ a {
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 29px 29px 48px;
+  padding: 29px 29px 47px;
   transform: translateY(110%);
   transition: transform 0.25s linear 0s;
 }
@@ -1102,9 +1128,34 @@ a {
 
 .layout-hover p {
   color: #666666;
-  margin-bottom: 31px;
+  margin: 0 auto 31px;
   max-height: 296px;
   overflow-y: auto;
+  width: 200px;
+}
+
+.layout-mishka, .layout-barbershop {
+  margin-bottom: 31px;
+}
+
+.layout-barbershop p {
+  width: 180px;
+}
+
+.layout-mishka .layout-hover, .layout-barbershop .layout-hover {
+  padding-bottom: 43px;
+}
+
+.layout-pink p {
+  width: 250px;
+}
+
+.layout-aplus p {
+  width: 250px;
+}
+
+.layout-kvast p {
+  width: 250px;
 }
 
 .layout-item:hover .layout-hover {
@@ -1116,5 +1167,17 @@ a {
 }
 
 .paginator {
-  margin-top: 26px;
+  margin-top: 30px;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
 }

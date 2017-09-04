@@ -1,8 +1,12 @@
-(function () {
+(function() {
   var activeSlide, activeLink;
+  var fields = ['name', 'email', 'comment'];
+
+  var popup = document.querySelector('.contacts-popup-form');
+  var form = document.querySelector('.contacts-popup-form form');
 
   function initialize() {
-    [].slice.call(document.querySelectorAll('.slider-controls a')).forEach(function (a) {
+    [].slice.call(document.querySelectorAll('.slider-controls a')).forEach(function(a) {
       var slide = document.getElementById(a.dataset.rel);
 
       if (slide.classList.contains('slide-active')) {
@@ -17,9 +21,13 @@
     document.querySelector('.contacts-btn').addEventListener('click', openPopup);
     document.querySelector('.contacts-popup-close').addEventListener('click', closePopup);
 
-    [].slice.call(document.querySelectorAll('.contacts-popup-form input, .contacts-popup-form textarea')).forEach(function (control) {
-      control.addEventListener('blur', touchControl)
+    form.addEventListener('submit', submitForm);
+
+    fields.map(function(name) {
+      form.elements[name].addEventListener('focus', clearInvalidState);
     });
+
+    popup.addEventListener('animationend', clearAnimation);
   }
 
   function sliderClick(event) {
@@ -43,16 +51,42 @@
 
   function openPopup(event) {
     event.preventDefault();
-    document.querySelector('.contacts-popup-form').classList.add('opened');
+    popup.classList.add('opened');
   }
 
   function closePopup(event) {
     event.preventDefault();
-    document.querySelector('.contacts-popup-form').classList.remove('opened');
+    popup.classList.remove('opened');
+
+    fields.map(function(name) {
+      form.elements[name].classList.remove('invalid');
+    });
   }
 
-  function touchControl(event) {
-    event.target.classList.add('touched');
+  function submitForm(event) {
+    var isValid = fields.reduce(function(acc, name) {
+      var element = form.elements[name];
+
+      if (element.value.trim() === '') {
+        element.classList.add('invalid');
+        return false;
+      } else {
+        return acc;
+      }
+    }, true);
+
+    if (!isValid) {
+      popup.classList.add('invalid-form');
+      event.preventDefault();
+    }
+  }
+
+  function clearInvalidState(event) {
+    event.target.classList.remove('invalid');
+  }
+
+  function clearAnimation(event) {
+    popup.classList.remove('invalid-form');
   }
 
   if (document.readyState == 'loading') {
